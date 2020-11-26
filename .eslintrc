@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "@nuxtjs/eslint-config-typescript"
+  ],
+  "rules": {
+    "semi": ["error", "always"],
+    "comma-dangle": ["error", {
+      "arrays": "never",
+      "objects": "always"
+    }]
+  }
+}

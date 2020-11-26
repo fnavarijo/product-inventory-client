@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppNav Component should have User and Cart buttons 1`] = `<nav class="bg-black"><label for="username">Username</label> <input type="text" name="username"> <label for="password">Password</label> <input type="text" name="password"> <button class="bg-gray-500">Login</button></nav>`;
