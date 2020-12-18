@@ -5,8 +5,8 @@
   "rules": {
     "semi": ["error", "always"],
     "comma-dangle": ["error", {
-      "arrays": "never",
-      "objects": "always"
+      "arrays": "always-multiline",
+      "objects": "always-multiline"
     }]
   }
 }

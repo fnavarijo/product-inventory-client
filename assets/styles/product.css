@@ -1,0 +1,7 @@
+.category {
+  @apply uppercase font-light;
+}
+
+/* .name {
+  @apply text-lg text-dark-gray-600 hover:text-primary-600 transition ease-in duration-100;
+} */

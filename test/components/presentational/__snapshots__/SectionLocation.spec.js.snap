@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionLocation component should display path set via props 1`] = `
+<div class="font-bold border-b text-gray-900 border-light-gray-400 mb-5 pb-2">
+  home &gt; catalog
+</div>
+`;

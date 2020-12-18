@@ -5,8 +5,11 @@
     <label for="password">Password</label>
     <input type="text" v-model="credentials.password" name="password">
     <button @click="doLogin" class="bg-gray-500">Login</button> -->
-    <img class="h-12 w-12 m-5" src="~/assets/img/user.svg" alt="Go to shopping cart">
-    <img class="h-12 w-12 m-5" src="~/assets/img/shopping.svg" alt="Go to shopping cart">
+    <!-- TODO: On hover, paint path white -->
+    <NuxtLink to="/login">
+      <img class="nav-icon" src="~/assets/img/user.svg" alt="Go to shopping cart">
+    </NuxtLink>
+    <img class="nav-icon" src="~/assets/img/shopping.svg" alt="Go to shopping cart">
   </nav>
 </template>
 
@@ -14,27 +17,33 @@
 import Vue from 'vue';
 
 export default Vue.extend({
-  data () {
-    return {
-      credentials: {
-        username: '',
-        password: '',
-      }
-    }
-  },
-  methods: {
-    async doLogin () {
-      const { username, password } = this.credentials;
-      // TODO: move this to a centralized api management
-      const { data } = await this.$axios.post('/auth/local', {
-        identifier: username,
-        password,
-      });
+  // data () {
+  //   return {
+  //     credentials: {
+  //       username: '',
+  //       password: '',
+  //     },
+  //   },
+  // },
+  // methods: {
+  //   async doLogin () {
+  //     const { username, password } = this.credentials;
+  //     // TODO: move this to a centralized api management
+  //     const { data } = await this.$axios.post('/auth/local', {
+  //       identifier: username,
+  //       password,
+  //     });
 
-      localStorage.setItem('session', data.jwt);
-      this.$router.push('/home');
+  //     localStorage.setItem('session', data.jwt);
+  //     this.$router.push('/home');
 
-    }
-  }
-})
+  //   }
+  // }
+});
 </script>
+
+<style scoped>
+.nav-icon {
+  @apply h-10 w-10 m-5;
+}
+</style>
