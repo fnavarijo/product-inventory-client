@@ -8,9 +8,9 @@
         Productos <strong>Destacados</strong>
       </h2>
       <div class="grid grid-cols-3">
-        <ProductCard category="Zapatos" name="Nike shoes" :price="25.50" />
-        <ProductCard category="Zapatos" name="Nike shoes" :price="25.50" />
-        <ProductCard category="Zapatos" name="Nike shoes" :price="25.50" />
+        <ProductCard id="1" category="Zapatos" name="Nike shoes" :price="25.50" />
+        <ProductCard id="1" category="Zapatos" name="Nike shoes" :price="25.50" />
+        <ProductCard id="1" category="Zapatos" name="Nike shoes" :price="25.50" />
       </div>
     </section>
   </div>

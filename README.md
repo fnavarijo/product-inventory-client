@@ -29,6 +29,10 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 | h5      | text-base |
 | h6      | text-sm   |
 
+## Container class
+TODO: Check container importance and what values could work
+
+## Add commit standar
 
 ### TODO:
 - Abstract api calls to a different folder.

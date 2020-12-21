@@ -24,7 +24,7 @@ module.exports = {
         nav: '256px 1fr',
       },
       gridTemplateRows: {
-        content: '100px 1fr',
+        content: '150px 1fr',
       },
       fill: theme => ({
         primary: theme('colors.primary.500'),
