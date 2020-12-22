@@ -1,14 +1,13 @@
 <template>
-  <div class="w-full">
+  <div>
     <SectionLocation path="home > catalog" />
-    <section class="w-full h-56 flex items-center justify-center bg-orange-300 mb-10">
-      Banner
-    </section>
-    <section>
+    <PromotionBanner />
+    <section class="mt-10">
       <div class="flex justify-between mb-5">
-        <div class="border border-gray-900">
-          Input
-        </div>
+        <FormSelect>
+          <option value="desc">Descendente</option>
+          <option value="asc">Ascendiente</option>
+        </FormSelect>
         <div class="flex my-5">
           <span class="text-sm">Mostrando 4 resultados de 60</span>
           <GridIcon
@@ -75,10 +74,12 @@
 <script lang="ts">
 import Vue from 'vue';
 
+import PromotionBanner from '@/components/banner/PromotionBanner.vue';
 import ProductCard from '@/components/product/ProductCard.vue';
 import ProductTile from '@/components/product/ProductTile.vue';
 import SectionLocation from '@/components/presentational/SectionLocation.vue';
 import LoadMoreButton from '@/components/button/LoadMoreButton.vue';
+import FormSelect from '@/components/form/FormSelect.vue';
 
 import GridIcon from '@/assets/img/grid.svg?inline';
 import ListIcon from '@/assets/img/list.svg?inline';
@@ -92,6 +93,8 @@ export default Vue.extend({
     GridIcon,
     ListIcon,
     LoadMoreButton,
+    PromotionBanner,
+    FormSelect,
   },
   layout: 'portfolio',
   data () {
