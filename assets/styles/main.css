@@ -1,3 +1,9 @@
+@import '~/node_modules/swiper/css/swiper.css';
+
+:root {
+  --swiper-pagination-color: theme('colors.dark-gray.600');
+}
+
 .square-256 {
   @apply h-256 w-256;
 }

@@ -21,7 +21,7 @@ module.exports = {
         full: '100%',
       },
       gridTemplateColumns: {
-        nav: '256px 1fr',
+        nav: '256px minmax(0, 1fr)',
       },
       gridTemplateRows: {
         content: '150px 1fr',
