@@ -9,6 +9,6 @@
 import Vue from 'vue';
 
 export default Vue.extend({
-  name: 'FormSelect',
+  name: 'FlowSelect',
 });
 </script>

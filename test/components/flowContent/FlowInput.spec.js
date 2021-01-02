@@ -1,10 +1,10 @@
 import { mount } from '@vue/test-utils';
 
-import FormInput from '@/components/form/FormInput.vue';
+import FlowInput from '@/components/flowContent/FlowInput.vue';
 
-describe('FormInput component', () => {
+describe('FlowInput component', () => {
   xit('should generate input with customs styles', () => {
-    const wrapper = mount(FormInput, {
+    const wrapper = mount(FlowInput, {
       propsData: {
         name: 'username',
         label: 'User name',
