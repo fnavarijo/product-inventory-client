@@ -1,14 +1,12 @@
 <template>
   <div v-swiper="swiperOption">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="h-16 bg-dark-gray-500 text-white">Slide 1</div>
-      </div>
-      <div class="swiper-slide">
-        <div class="h-16 bg-dark-gray-500 text-white">Slide 2</div>
-      </div>
-      <div class="swiper-slide">
-        <div class="h-16 bg-dark-gray-500 text-white">Slide 3</div>
+      <div
+        v-for="(image, index) in images"
+        :key="index"
+        class="swiper-slide"
+      >
+        <img :src="image" alt="" class="w-full">
       </div>
     </div>
     <div class="swiper-pagination" />
@@ -16,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue, { PropType } from 'vue';
 
 import { directive as swiper } from 'vue-awesome-swiper';
 
@@ -24,16 +22,24 @@ export default Vue.extend({
   directives: {
     swiper,
   },
-  data () {
-    return {
-      swiperOption: {
-        pagination: {
-          el: '.swiper-pagination',
+  props: {
+    images: {
+      type: Array as PropType<Array<string>>,
+      default: [],
+    },
+  },
+  computed: {
+    swiperOption () {
+      return {
+        swiperOption: {
+          pagination: {
+            el: '.swiper-pagination',
+          },
+          init: true,
+          grabCursor: true,
         },
-        init: true,
-        grabCursor: true,
-      },
-    };
+      };
+    },
   },
 });
 </script>

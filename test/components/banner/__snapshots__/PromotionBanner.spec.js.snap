@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PromotionBanner component should receive images array as prop 1`] = `
+<div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+  <div class="swiper-wrapper" style="webkit-transition-duration: 0ms; transition-duration: 0ms; webkit-transform: translate3d(NaNpx, 0px, 0px); transform: translate3d(NaNpx, 0px, 0px);">
+    <div class="swiper-slide"><img src="http://image.test.com/image/1" alt="" class="w-full"></div>
+    <div class="swiper-slide"><img src="http://image.test.com/image/2" alt="" class="w-full"></div>
+  </div>
+  <div class="swiper-pagination"></div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+</div>
+`;
