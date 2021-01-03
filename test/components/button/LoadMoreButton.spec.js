@@ -1,4 +1,4 @@
-import { mount } from '@vue/test-utils';
+import { mount, RouterLinkStub } from '@vue/test-utils';
 
 import LoadMoreButton from '@/components/button/LoadMoreButton.vue';
 
@@ -15,6 +15,9 @@ describe('LoadMoreButton component', () => {
 
   it('should render component as NuxtLink when passed prop', () => {
     const wrapper = mount(LoadMoreButton, {
+      stubs: {
+        'nuxt-link': RouterLinkStub,
+      },
       propsData: {
         as: 'nuxt-link',
       },
