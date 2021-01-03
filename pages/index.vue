@@ -17,9 +17,14 @@
         <ProductCard :id="1" category="Zapatos" name="Nike shoes" :price="25.50" />
         <ProductCard :id="1" category="Zapatos" name="Nike shoes" :price="25.50" />
       </div>
-      <LoadMoreButton as="nuxt-link" to="/catalog" class="my-10 mx-auto block">
+      <AppButton
+        as="nuxt-link"
+        to="/catalog"
+        class="my-10 mx-auto block"
+        color="secondary"
+      >
         Ver más
-      </LoadMoreButton>
+      </AppButton>
     </section>
     <hr class="border-light-gray-400 w-5/6 mx-auto">
     <section class="my-10 px-10 lg:px-24">
@@ -33,9 +38,14 @@
         <ProductCard :id="1" category="Zapatos" name="Nike shoes" :price="25.50" />
         <ProductCard :id="1" category="Zapatos" name="Nike shoes" :price="25.50" />
       </div>
-      <LoadMoreButton as="nuxt-link" to="/catalog" class="my-10 mx-auto block">
+      <AppButton
+        as="nuxt-link"
+        to="/catalog"
+        class="my-10 mx-auto block"
+        color="secondary"
+      >
         Ver más
-      </LoadMoreButton>
+      </AppButton>
     </section>
   </div>
 </template>
@@ -44,12 +54,12 @@
 import Vue from 'vue';
 
 import ProductCard from '@/components/product/ProductCard.vue';
-import LoadMoreButton from '@/components/button/LoadMoreButton.vue';
+import AppButton from '@/components/button/AppButton.vue';
 
 export default Vue.extend({
   components: {
+    AppButton,
     ProductCard,
-    LoadMoreButton,
   },
 });
 </script>

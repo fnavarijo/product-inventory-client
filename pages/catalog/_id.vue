@@ -9,9 +9,9 @@
         <h1 class="text-4xl font-bold text-dark-gray-600">Product Name</h1>
         <span class="font-bold text-primary-500 text-2xl">Q. 20.00</span>
         <p class="leading-7 max-w-xl mb-4">Duis aute irure dolor in reprehenderit in volupt ate velit esse cillum dolre eu fugiat nulla pariatur excepteur sint occaecat cupidatat non. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
-        <AddProductButton>
+        <AppButton>
           Agregar a carrito
-        </AddProductButton>
+        </AppButton>
       </div>
     </div>
     <div>
@@ -30,14 +30,14 @@
 <script lang="ts">
 import Vue from 'vue';
 
-import AddProductButton from '@/components/button/AddProductButton.vue';
+import AppButton from '@/components/button/AppButton.vue';
 import SectionLocation from '@/components/presentational/SectionLocation.vue';
 
 export default Vue.extend({
   name: 'CatalogId',
   components: {
     SectionLocation,
-    AddProductButton,
+    AppButton,
   },
   layout: 'portfolio',
 });
