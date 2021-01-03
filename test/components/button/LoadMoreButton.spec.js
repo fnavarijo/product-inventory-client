@@ -12,4 +12,17 @@ describe('LoadMoreButton component', () => {
 
     expect(wrapper.emitted().click).toBeTruthy();
   });
+
+  it('should render component as NuxtLink when passed prop', () => {
+    const wrapper = mount(LoadMoreButton, {
+      propsData: {
+        as: 'nuxt-link',
+      },
+    });
+
+    const buttonElement = wrapper.find('element');
+
+    expect(buttonElement.exists()).toBeFalsy();
+    expect(wrapper.html()).toMatchSnapshot();
+  });
 });

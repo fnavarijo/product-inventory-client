@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadMoreButton component should render component as NuxtLink when passed prop 1`] = `<nuxt-link to="/" class="py-4 px-10 bg-white text-dark-gray-600 border-4 border-gray-800 w-max hover:text-white hover:bg-dark-gray-600 font-bold transition duration-100 ease-linear"></nuxt-link>`;
