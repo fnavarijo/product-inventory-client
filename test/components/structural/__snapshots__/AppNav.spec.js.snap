@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`AppNav Component should have User and Cart buttons 1`] = `<nav class="absolute top-0 right-0 h-32 flex items-center p-16"><a><img src="~/assets/img/user.svg" alt="Go to shopping cart" class="nav-icon"></a> <img src="~/assets/img/shopping.svg" alt="Go to shopping cart" class="nav-icon"></nav>`;
