@@ -5,6 +5,7 @@ module.exports = {
     opacity: ['responsive', 'hover', 'focus', 'group-hover'],
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
     fill: ['hover'],
+    stroke: ['hover'],
   },
   theme: {
     extend: {
@@ -29,6 +30,12 @@ module.exports = {
       fill: theme => ({
         primary: theme('colors.primary.500'),
       }),
+      stroke: theme => ({
+        primary: theme('colors.primary.500'),
+      }),
+      width: {
+        max: 'max-content',
+      },
     },
     colors: {
       white: defaultTheme.colors.white,
@@ -47,6 +54,7 @@ module.exports = {
         700: '#181B1F',
       },
       primary: {
+        200: '#EDEDEA',
         500: '#ADA084',
         600: '#9D8D6B',
       },

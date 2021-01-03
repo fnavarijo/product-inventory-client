@@ -1,7 +1,7 @@
 <template>
   <div>
     <SectionLocation path="Product" />
-    <div class="flex mb-8">
+    <div class="flex flex-col lg:flex-row mb-8">
       <div class="h-256 w-256">
         Gallery (TODO)
       </div>

@@ -7,16 +7,25 @@
     <button @click="doLogin" class="bg-gray-500">Login</button> -->
     <!-- TODO: On hover, paint path white -->
     <NuxtLink to="/login">
-      <img class="nav-icon" src="~/assets/img/user.svg" alt="Go to shopping cart">
+      <UserIcon class="nav-icon hover:stroke-primary transition ease-linear duration-75" />
+      <!-- <img class="nav-icon" src="~/assets/img/user.svg" alt="Go to shopping cart"> -->
     </NuxtLink>
-    <img class="nav-icon" src="~/assets/img/shopping.svg" alt="Go to shopping cart">
+    <ShoppingCart class="nav-icon hover:stroke-primary transition ease-linear duration-75" />
   </nav>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 
+import UserIcon from '~/assets/img/user.svg?inline';
+import ShoppingCart from '~/assets/img/shopping.svg?inline';
+
 export default Vue.extend({
+  name: 'AppNav',
+  components: {
+    UserIcon,
+    ShoppingCart,
+  },
   // data () {
   //   return {
   //     credentials: {
@@ -44,6 +53,6 @@ export default Vue.extend({
 
 <style scoped>
 .nav-icon {
-  @apply h-10 w-10 m-5;
+  @apply h-10 w-10 mx-2;
 }
 </style>

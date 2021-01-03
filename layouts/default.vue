@@ -1,5 +1,5 @@
 <template>
-  <div class="font-body relative">
+  <div class="font-body relative text-base">
     <AppNav />
     <Nuxt />
     <AppFooter />
