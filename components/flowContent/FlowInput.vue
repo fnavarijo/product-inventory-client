@@ -5,6 +5,8 @@
       class="border-2 border-gray-500 p-3"
       :name="name"
       :type="type"
+      :value="value"
+      @input="emitInput"
     >
   </span>
 </template>
@@ -13,6 +15,7 @@
 import Vue from 'vue';
 
 export default Vue.extend({
+  name: 'FlowInput',
   props: {
     type: {
       type: String,
@@ -25,6 +28,15 @@ export default Vue.extend({
     label: {
       type: String,
       required: true,
+    },
+    value: {
+      type: String,
+      required: true,
+    },
+  },
+  methods: {
+    emitInput (event: any): void {
+      this.$emit('input', event.target.value);
     },
   },
 });
