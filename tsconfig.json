@@ -34,8 +34,5 @@
     "node_modules",
     ".nuxt",
     "dist"
-  ],
-  "files": [
-    "@types/custom.d.ts"
   ]
 }
