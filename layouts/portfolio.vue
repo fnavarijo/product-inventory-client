@@ -62,7 +62,7 @@ export default Vue.extend({
   },
   data () {
     return {
-      smallCheckbox: ''
+      smallCheckbox: '',
     };
   },
   methods: {

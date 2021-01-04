@@ -1,13 +1,13 @@
 <template>
   <div>
     <SectionLocation path="home > catalog" />
-    <PromotionBanner />
+    <PromotionBanner :images="['https://portotheme.com/html/porto_ecommerce/demo_23/assets/images/banners/category_banner.jpg', 'https://portotheme.com/html/porto_ecommerce/demo_23/assets/images/banners/category_banner.jpg']" />
     <section class="mt-10">
       <div class="flex justify-between mb-5">
-        <FormSelect>
+        <FlowSelect>
           <option value="desc">Descendente</option>
           <option value="asc">Ascendiente</option>
-        </FormSelect>
+        </FlowSelect>
         <div class="flex my-5">
           <span class="text-sm">Mostrando 4 resultados de 60</span>
           <GridIcon
@@ -64,9 +64,12 @@
           description="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante."
         />
       </div>
-      <LoadMoreButton class="my-5 mx-auto block">
+      <AppButton
+        class="my-5 mx-auto block"
+        color="secondary"
+      >
         Cargar más
-      </LoadMoreButton>
+      </AppButton>
     </section>
   </div>
 </template>
@@ -78,8 +81,8 @@ import PromotionBanner from '@/components/banner/PromotionBanner.vue';
 import ProductCard from '@/components/product/ProductCard.vue';
 import ProductTile from '@/components/product/ProductTile.vue';
 import SectionLocation from '@/components/presentational/SectionLocation.vue';
-import LoadMoreButton from '@/components/button/LoadMoreButton.vue';
-import FormSelect from '@/components/form/FormSelect.vue';
+import AppButton from '@/components/button/AppButton.vue';
+import FlowSelect from '@/components/flowContent/FlowSelect.vue';
 
 import GridIcon from '@/assets/img/grid.svg?inline';
 import ListIcon from '@/assets/img/list.svg?inline';
@@ -92,9 +95,9 @@ export default Vue.extend({
     SectionLocation,
     GridIcon,
     ListIcon,
-    LoadMoreButton,
+    AppButton,
     PromotionBanner,
-    FormSelect,
+    FlowSelect,
   },
   layout: 'portfolio',
   data () {
