@@ -4,7 +4,8 @@ export interface AuthLocalParams {
 }
 
 export interface UserInfo {
-  name: String;
-  lastname: String;
-  username: String;
+  name: string;
+  lastname: string;
+  username: string;
+  jwt: string;
 }

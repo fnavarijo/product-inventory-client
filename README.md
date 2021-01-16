@@ -35,7 +35,7 @@ TODO: Check container importance and what values could work
 ## Add commit standar
 
 ### TODO:
-- Abstract api calls to a different folder.
-- Configure vuex
-- Transform inputs to form with inputs on AppNav.
 - Set localstorage with persistent store
+- Adding global request handler for axios
+- Display errors of usage in a good way
+- Adding typings to Vuex store
