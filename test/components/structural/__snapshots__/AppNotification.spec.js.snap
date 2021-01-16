@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppNotification component should display notification with message 1`] = `<div class="bg-red-500 text-white flex items-center rounded p-2"><svg class="w-8 h-8 mr-4"></svg> <span>Something happened</span></div>`;

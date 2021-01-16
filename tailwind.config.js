@@ -36,12 +36,23 @@ module.exports = {
       width: {
         max: 'max-content',
       },
+      inset: {
+        '-4': '-1rem',
+        '-8': '-2rem',
+        '-12': '-3rem',
+        '-16': '-4rem',
+        '-20': '-5rem',
+        '-24': '-6rem',
+      },
     },
     colors: {
       white: defaultTheme.colors.white,
       black: defaultTheme.colors.black,
       gray: defaultTheme.colors.gray,
       amber: defaultTheme.colors.yellow,
+      red: {
+        500: '#DE6F6E',
+      },
       'light-gray': {
         400: '#E7E7E7',
         500: '#E4E4E4',
