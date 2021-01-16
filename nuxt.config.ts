@@ -24,7 +24,10 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     '~plugins/filters.ts',
+    '~plugins/error-handler.ts',
     '~plugins/axios-module.ts',
+    '~plugins/axios-interceptor.ts',
+    '~plugins/vee-validations.ts',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -59,5 +62,8 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    transpile: [
+      'vee-validate/dist/rules',
+    ],
   },
 };
