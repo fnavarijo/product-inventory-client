@@ -4,6 +4,7 @@
       <img class="h-20 w-20" src="~/assets/img/shirt.svg" alt="">
       <span class="flex">
         <!-- TODO: abstract animation to class -->
+        <AppSalute v-if="isUserLoggedIn" />
         <UserIcon class="w-10 h-10 cursor-pointer hover:stroke-primary transition ease-linear duration-100" />
         <ShoppingCartIcon class="w-10 h-10 ml-4 cursor-pointer transition duration-100 ease-linear hover:stroke-primary" />
       </span>
@@ -45,9 +46,11 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { mapGetters } from 'vuex';
 
-import ProductCategoryMenu from '@/components/product/ProductCategoryMenu.vue';
+import AppSalute from '@/components/structural/AppSalute.vue';
 import FlowCheckbox from '@/components/flowContent/FlowCheckbox.vue';
+import ProductCategoryMenu from '@/components/product/ProductCategoryMenu.vue';
 
 import UserIcon from '@/assets/img/user.svg?inline';
 import ShoppingCartIcon from '@/assets/img/shopping.svg?inline';
@@ -57,6 +60,7 @@ export default Vue.extend({
   components: {
     ProductCategoryMenu,
     FlowCheckbox,
+    AppSalute,
     UserIcon,
     ShoppingCartIcon,
   },
@@ -64,6 +68,11 @@ export default Vue.extend({
     return {
       smallCheckbox: '',
     };
+  },
+  computed: {
+    ...mapGetters('user', {
+      isUserLoggedIn: 'isUserLoggedIn',
+    }),
   },
   methods: {
     filterProducts (category: string): void {

@@ -1,12 +1,11 @@
 <template>
   <nav class="absolute top-0 right-0 h-32 flex items-center p-16">
-    <div class="text-dark-gray-700 text-right border-r border-dark-gray-600 pr-4" v-if="isUserLoggedIn">
-      <span class="font-bold block">Bievenido</span>
-      {{ userName }}
-    </div>
+    <AppSalute v-if="isUserLoggedIn" />
     <NuxtLink to="/login">
       <UserIcon class="nav-icon hover:stroke-primary transition ease-linear duration-75" />
-      <!-- <img class="nav-icon" src="~/assets/img/user.svg" alt="Go to shopping cart"> -->
+    </NuxtLink>
+    <NuxtLink to="/catalog">
+      <CatalogIcon class="nav-icon hover:stroke-primary transition ease-linear duration-75" />
     </NuxtLink>
     <ShoppingCart class="nav-icon hover:stroke-primary transition ease-linear duration-75" />
   </nav>
@@ -18,11 +17,15 @@ import { mapState, mapGetters } from 'vuex';
 
 import UserIcon from '@/assets/img/user.svg?inline';
 import ShoppingCart from '@/assets/img/shopping.svg?inline';
+import CatalogIcon from '@/assets/img/catalog.svg?inline';
+import AppSalute from '@/components/structural/AppSalute.vue';
 
 export default Vue.extend({
   name: 'AppNav',
   components: {
     UserIcon,
+    AppSalute,
+    CatalogIcon,
     ShoppingCart,
   },
   computed: {

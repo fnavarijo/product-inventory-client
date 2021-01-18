@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppSalute component should render salute for the user 1`] = `
+<div class="text-dark-gray-700 text-right border-r border-dark-gray-600 pr-4"><span class="font-bold block">Bienvenido</span>
+  John
+</div>
+`;
