@@ -28,7 +28,8 @@
       "@nuxt/types",
       "@types/swiper",
       "@nuxtjs/axios",
-      "@types/vuelidate"
+      "@types/vuelidate",
+      "@types/jest"
     ]
   },
   "exclude": [
