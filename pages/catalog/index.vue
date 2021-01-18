@@ -25,43 +25,10 @@
       <div class="m-auto" :class="gridDesign">
         <component
           :is="componentToRender"
-          :id="1"
-          category="Zapatos"
-          name="Nike shoes"
-          :price="25.50"
-          description="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante."
-        />
-        <component
-          :is="componentToRender"
-          :id="2"
-          category="Zapatos"
-          name="Nike shoes"
-          :price="25.50"
-          description="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante."
-        />
-        <component
-          :is="componentToRender"
-          :id="3"
-          category="Zapatos"
-          name="Nike shoes"
-          :price="25.50"
-          description="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante."
-        />
-        <component
-          :is="componentToRender"
-          :id="4"
-          category="Zapatos"
-          name="Nike shoes"
-          :price="25.50"
-          description="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante."
-        />
-        <component
-          :is="componentToRender"
-          :id="5"
-          category="Zapatos"
-          name="Nike shoes"
-          :price="25.50"
-          description="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante."
+          v-for="(product, index) in products"
+          :key="index"
+          v-bind="product"
+          category="zapatos"
         />
       </div>
       <AppButton
@@ -76,6 +43,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { mapState } from 'vuex';
 
 import PromotionBanner from '@/components/banner/PromotionBanner.vue';
 import ProductCard from '@/components/product/ProductCard.vue';
@@ -88,7 +56,6 @@ import GridIcon from '@/assets/img/grid.svg?inline';
 import ListIcon from '@/assets/img/list.svg?inline';
 
 export default Vue.extend({
-  name: 'Products',
   components: {
     ProductCard,
     ProductTile,
@@ -100,14 +67,19 @@ export default Vue.extend({
     FlowSelect,
   },
   layout: 'portfolio',
+  // TODO: TS validation
   data () {
-    // TODO: TS validation
     return {
       displayMode: 'grid',
     };
   },
+  fetch () {
+    this.$store.dispatch('products/getAllProducts');
+  },
   computed: {
     isDisplayGrid () {
+      // TODO: WTF? can access state
+      // @ts-ignore
       return this.displayMode === 'grid';
     },
     // TODO: Rename for a better name
@@ -122,6 +94,7 @@ export default Vue.extend({
         ? 'ProductCard'
         : 'ProductTile';
     },
+    ...mapState('products', ['products']),
   },
 });
 </script>
