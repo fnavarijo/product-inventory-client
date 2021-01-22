@@ -2,8 +2,11 @@
   <div>
     <SectionLocation path="Product" />
     <div class="flex flex-col lg:flex-row mb-8">
-      <div class="h-256 w-256 mr-4">
-        <img src="https://portotheme.com/html/porto_ecommerce/demo_23/assets/images/products/product-1.jpg" alt="">
+      <div class="h-256 w-256 mr-4 overflow-hidden">
+        <img
+          :src="product.images[0]"
+          alt=""
+        >
       </div>
       <div>
         <h1 class="text-4xl font-bold text-dark-gray-600">

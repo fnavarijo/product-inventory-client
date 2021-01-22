@@ -1,5 +1,9 @@
 export const ProductContainerBase = {
   props: {
+    id: {
+      type: String,
+      required: true,
+    },
     category: {
       type: String,
       required: true,
@@ -12,7 +16,7 @@ export const ProductContainerBase = {
       type: Number,
       required: true,
     },
-    id: {
+    image: {
       type: String,
       required: true,
     },

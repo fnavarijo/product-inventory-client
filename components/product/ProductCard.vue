@@ -1,7 +1,11 @@
 <template>
   <NuxtLink :to="`/catalog/${id}`" class="group m-auto cursor-pointer">
     <div class="relative">
-      <img class="square-256 object-cover" src="~/assets/img/product.jpg" alt="">
+      <img
+        class="square-256 object-cover"
+        :src="image"
+        alt=""
+      >
       <div class="absolute bottom-0 bg-primary-600 text-white uppercase w-full text-center p-3 opacity-0 group-hover:opacity-100 transition ease-in duration-100">
         Ver
       </div>

@@ -28,6 +28,7 @@
           v-for="(product, index) in products"
           :key="index"
           v-bind="product"
+          :image="product.images[0]"
           category="zapatos"
         />
       </div>
