@@ -45,9 +45,9 @@ export default Vue.extend({
     AppButton,
   },
   layout: 'portfolio',
-  fetch () {
+  async fetch () {
     const { id: productId } = this.$route.params;
-    this.$store.dispatch('products/getProductById', productId);
+    await this.$store.dispatch('products/getProductById', productId);
   },
   computed: {
     ...mapState('products', ['product']),
