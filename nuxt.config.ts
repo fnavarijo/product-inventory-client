@@ -66,4 +66,14 @@ export default {
       'vee-validate/dist/rules',
     ],
   },
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: process.env.BROWSER_BASE_URL,
+    },
+  },
+  privateRuntimeConfig: {
+    axios: {
+      baseURL: process.env.BASE_URL,
+    },
+  },
 };

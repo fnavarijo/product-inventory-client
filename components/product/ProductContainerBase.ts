@@ -13,7 +13,7 @@ export const ProductContainerBase = {
       required: true,
     },
     id: {
-      type: Number,
+      type: String,
       required: true,
     },
   },

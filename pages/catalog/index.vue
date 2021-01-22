@@ -73,8 +73,8 @@ export default Vue.extend({
       displayMode: 'grid',
     };
   },
-  fetch () {
-    this.$store.dispatch('products/getAllProducts');
+  async fetch () {
+    await this.$store.dispatch('products/getAllProducts');
   },
   computed: {
     isDisplayGrid () {

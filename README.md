@@ -36,6 +36,4 @@ TODO: Check container importance and what values could work
 
 ### TODO:
 - Set localstorage with persistent store
-- Adding global request handler for axios
-- Display errors of usage in a good way
-- Adding typings to Vuex store
+- read about nuxt different deployments
