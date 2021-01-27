@@ -23,14 +23,19 @@
         </div>
       </div>
       <div class="m-auto" :class="gridDesign">
-        <component
+        <ProductCombinationCard
+          v-for="(product, index) in productCombinations"
+          :key="index"
+          v-bind="product"
+        />
+        <!-- <component
           :is="componentToRender"
           v-for="(product, index) in products"
           :key="index"
           v-bind="product"
           :image="product.images[0]"
           category="zapatos"
-        />
+        /> -->
       </div>
       <AppButton
         class="my-5 mx-auto block"
@@ -47,8 +52,9 @@ import Vue from 'vue';
 import { mapState } from 'vuex';
 
 import PromotionBanner from '@/components/banner/PromotionBanner.vue';
-import ProductCard from '@/components/product/ProductCard.vue';
-import ProductTile from '@/components/product/ProductTile.vue';
+// import ProductCard from '@/components/product/ProductCard.vue';
+// import ProductTile from '@/components/product/ProductTile.vue';
+// import ProductCombinationCard from '@/components/productCombination/ProductCombinationCard.vue';
 import SectionLocation from '@/components/presentational/SectionLocation.vue';
 import AppButton from '@/components/button/AppButton.vue';
 import FlowSelect from '@/components/flowContent/FlowSelect.vue';
@@ -58,14 +64,15 @@ import ListIcon from '@/assets/img/list.svg?inline';
 
 export default Vue.extend({
   components: {
-    ProductCard,
-    ProductTile,
+    // ProductCard,
+    // ProductTile,
     SectionLocation,
     GridIcon,
     ListIcon,
     AppButton,
     PromotionBanner,
     FlowSelect,
+    // ProductCombinationCard,
   },
   layout: 'portfolio',
   // TODO: TS validation
@@ -75,7 +82,8 @@ export default Vue.extend({
     };
   },
   async fetch () {
-    await this.$store.dispatch('products/getAllProducts');
+    // await this.$store.dispatch('products/getAllProducts');
+    await this.$store.dispatch('products/getAllProductCombinations');
   },
   computed: {
     isDisplayGrid () {
@@ -95,7 +103,7 @@ export default Vue.extend({
         ? 'ProductCard'
         : 'ProductTile';
     },
-    ...mapState('products', ['products']),
+    ...mapState('products', ['productCombinations']),
   },
 });
 </script>

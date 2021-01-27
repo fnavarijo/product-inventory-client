@@ -2,7 +2,7 @@
   <component
     :is="as"
     :to="to"
-    class="py-4 px-10 w-max font-bold transition duration-100 ease-linear"
+    class="py-4 px-10 w-max rounded-md font-bold transition duration-100 ease-linear"
     :class="color"
   >
     <slot />

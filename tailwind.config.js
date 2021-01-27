@@ -6,6 +6,9 @@ module.exports = {
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
     fill: ['hover'],
     stroke: ['hover'],
+    display: ['hover', 'responsive', 'group-hover'],
+    inset: ['hover', 'responsive', 'group-hover'],
+    visibility: ['responsive', 'group-hover'],
   },
   theme: {
     extend: {
@@ -17,6 +20,7 @@ module.exports = {
       },
       spacing: {
         256: '256px',
+        cardRatio: '178.57%',
       },
       padding: {
         full: '100%',
@@ -43,6 +47,12 @@ module.exports = {
         '-16': '-4rem',
         '-20': '-5rem',
         '-24': '-6rem',
+      },
+      transitionProperty: {
+        bottom: 'bottom',
+      },
+      transitionTimingFunction: {
+        'in-expo': 'cubic-bezier(0, 1.12, 1, 1)',
       },
     },
     colors: {

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductInfoBox component should render available colors of the product 1`] = `
+<div class="text-dark-gray-600 flex items-center" colors="[object Object],[object Object]"><label class="check-container block relative cursor-pointer w-8 mr-8"><input type="checkbox" class="absolute opacity-0 cursor-pointer h-0 w-0"> <span class="checkmark absolute top-0 left-0 h-8 w-8 rounded-full border border-dark-gray-700"></span></label>
+  <div>
+    <h2 class="text-4xl font-bold">
+      Blusa
+    </h2>
+    <h3 class="text-3xl font-bold text-primary-500">
+      5589
+    </h3>
+  </div>
+</div>
+`;
+
+exports[`ProductInfoBox component should render component base information (type and code) 1`] = `
+<div class="text-dark-gray-600 flex items-center"><label class="check-container block relative cursor-pointer w-8 mr-8"><input type="checkbox" class="absolute opacity-0 cursor-pointer h-0 w-0"> <span class="checkmark absolute top-0 left-0 h-8 w-8 rounded-full border border-dark-gray-700"></span></label>
+  <div>
+    <h2 class="text-4xl font-bold">
+      Blusa
+    </h2>
+    <h3 class="text-3xl font-bold text-primary-500">
+      5698
+    </h3>
+  </div>
+</div>
+`;

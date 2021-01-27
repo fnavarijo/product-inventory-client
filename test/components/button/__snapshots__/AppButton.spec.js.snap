@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppButton component should render button component with secondary colors 1`] = `<button to="/" class="py-4 px-10 w-max font-bold transition duration-100 ease-linear secondary"></button>`;
+exports[`AppButton component should render button component with secondary colors 1`] = `<button to="/" class="py-4 px-10 w-max rounded-md font-bold transition duration-100 ease-linear secondary"></button>`;
 
-exports[`AppButton component should render component as NuxtLink when passed prop 1`] = `<a class="py-4 px-10 w-max font-bold transition duration-100 ease-linear primary"></a>`;
+exports[`AppButton component should render component as NuxtLink when passed prop 1`] = `<a class="py-4 px-10 w-max rounded-md font-bold transition duration-100 ease-linear primary"></a>`;
 
-exports[`AppButton component should render component as button as default 1`] = `<button to="/" class="py-4 px-10 w-max font-bold transition duration-100 ease-linear primary"></button>`;
+exports[`AppButton component should render component as button as default 1`] = `<button to="/" class="py-4 px-10 w-max rounded-md font-bold transition duration-100 ease-linear primary"></button>`;

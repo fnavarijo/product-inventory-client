@@ -1,23 +1,27 @@
 <template>
-  <div>
-    <SectionLocation path="Product" />
-    <div class="flex flex-col lg:flex-row mb-8">
-      <div class="h-256 w-256 mr-4 overflow-hidden">
+  <div class="w-full block">
+    <SectionLocation path="Producto" />
+    <div class="flex flex-col mb-8 items-center lg:flex-row">
+      <div class="relative w-64 mb-8 lg:mb-0 lg:mr-8">
         <img
-          :src="product.images[0]"
+          :src="productCombination.image"
           alt=""
+          class="w-full"
         >
       </div>
       <div>
-        <h1 class="text-4xl font-bold text-dark-gray-600">
-          {{ product.name }}
-        </h1>
-        <span class="font-bold text-primary-500 text-2xl">
-          Q. {{ product.price }}
-        </span>
-        <p class="leading-7 max-w-xl mb-4">
-          {{ product.shortDescription }}
-        </p>
+        <!-- TODO: If productCombination is empty, we should handle errors -->
+        <!-- TODO: Add not found page -->
+        <div
+          v-for="(product, index) in productCombination.products"
+          :key="index"
+          class="mb-8"
+        >
+          <ProductInfoBox
+            type="Blusa"
+            v-bind="product"
+          />
+        </div>
         <AppButton>
           Agregar a carrito
         </AppButton>
@@ -28,7 +32,7 @@
         <span class="border-primary-500 border-b-4">Descripción</span>
       </h2>
       <p>
-        {{ product.description }}
+        {{ productCombination.description }}
       </p>
     </div>
   </div>
@@ -50,10 +54,10 @@ export default Vue.extend({
   layout: 'portfolio',
   async fetch () {
     const { id: productId } = this.$route.params;
-    await this.$store.dispatch('products/getProductById', productId);
+    await this.$store.dispatch('products/getProductCombinationById', productId);
   },
   computed: {
-    ...mapState('products', ['product']),
+    ...mapState('products', ['productCombination']),
   },
 });
 </script>

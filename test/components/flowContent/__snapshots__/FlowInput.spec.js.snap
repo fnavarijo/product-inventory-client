@@ -1,18 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FlowInput component should display error message when passing prop 1`] = `
-<span class="flex flex-col"><label for="inputError">Error input</label> <div class="flex"><input name="inputError" type="text" class="border-2 border-gray-500 p-3 w-full"> <div class="bg-red-500 px-2 flex items-center justify-center"><svg class="w-8 h-8 text-white"></svg></div></div> <span class="input-error text-red-500 font-bold mt-1">
-    Something wrong happened
-  </span></span>
-`;
-
 exports[`FlowInput component should generate input with custom design 1`] = `
-<span class="flex flex-col"><label for="username">User name</label> <div class="flex"><input name="username" type="text" class="border-2 border-gray-500 p-3 w-full"> <div class="bg-red-500 px-2 flex items-center justify-center" style="display: none;"><svg class="w-8 h-8 text-white"></svg></div></div> <span class="input-error text-red-500 font-bold mt-1" style="display: none;">
-    
-  </span></span>
-`;
-
-exports[`FlowInput component should generate input with customs styles 1`] = `
 <span class="flex flex-col"><label for="username">User name</label> <div class="flex"><input name="username" type="text" class="border-2 border-gray-500 p-3 w-full"> <div class="bg-red-500 px-2 flex items-center justify-center" style="display: none;"><svg class="w-8 h-8 text-white"></svg></div></div> <span class="input-error text-red-500 font-bold mt-1" style="display: none;">
     
   </span></span>
