@@ -10,6 +10,7 @@ export interface Color {
 
 export interface ProductDetail {
   code: string;
+  category: string;
   description: string;
   colors: Array<Color>;
 }

@@ -18,7 +18,7 @@
           class="mb-8"
         >
           <ProductInfoBox
-            type="Blusa"
+            :type="product.category"
             v-bind="product"
           />
         </div>

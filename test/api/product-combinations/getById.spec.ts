@@ -45,4 +45,24 @@ describe('product-combinations getById', () => {
       { name: 'Negro', color: '#000000' },
     ]);
   });
+
+  it('should get products category from productCombination', async () => {
+    const { products } = await ProductCombinations.getById('600c90307a05276f744b3a67');
+
+    expect(products[0]).toMatchObject({
+      code: '7002',
+      description: 'Blusa blanca de algodon',
+      category: 'Blusa',
+      colors: [
+        {
+          name: 'Rosado',
+          color: '#f04c4c',
+        },
+        {
+          name: 'Negro',
+          color: '#000000',
+        },
+      ],
+    });
+  });
 });

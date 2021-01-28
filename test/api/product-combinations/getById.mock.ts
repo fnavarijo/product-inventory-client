@@ -10,7 +10,7 @@ export const mock = {
       color: '#bababa',
       published_at: '2021-01-23T20:44:48.961Z',
       createdAt: '2021-01-23T20:44:45.197Z',
-      updatedAt: '2021-01-23T20:58:26.703Z',
+      updatedAt: '2021-01-24T02:18:12.495Z',
       __v: 0,
       colors: [
         {
@@ -23,12 +23,20 @@ export const mock = {
         {
           _id: '600c8df2cd6f8f6caaa8c6ca',
           name: 'Negro',
-          color: '#000000',
           __v: 0,
+          color: '#000000',
           id: '600c8df2cd6f8f6caaa8c6ca',
         },
       ],
-      category: '600c760501c6d43211a165b4',
+      category: {
+        _id: '600c760501c6d43211a165b4',
+        name: 'Blusa',
+        published_at: '2021-01-23T19:16:24.238Z',
+        createdAt: '2021-01-23T19:16:21.046Z',
+        updatedAt: '2021-01-23T19:16:24.251Z',
+        __v: 0,
+        id: '600c760501c6d43211a165b4',
+      },
       id: '600c8abd53001357111bbca1',
     },
     {
@@ -40,7 +48,15 @@ export const mock = {
       createdAt: '2021-01-23T21:08:30.686Z',
       updatedAt: '2021-01-23T21:08:51.011Z',
       __v: 0,
-      category: '600c761601c6d43211a165b5',
+      category: {
+        _id: '600c761601c6d43211a165b5',
+        name: 'Pantalón',
+        published_at: '2021-01-23T19:16:40.106Z',
+        createdAt: '2021-01-23T19:16:38.552Z',
+        updatedAt: '2021-01-23T19:16:40.118Z',
+        __v: 0,
+        id: '600c761601c6d43211a165b5',
+      },
       id: '600c904e7a05276f744b3a68',
     },
   ],

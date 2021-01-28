@@ -15,14 +15,16 @@ export async function getById (id: string): Promise<SingleProductCombination> {
 
   // TODO: I'd like to improve naming
   const pickProductBase = pick(['products', 'image']);
-  const pickProduct = pick(['code', 'description', 'colors']);
+  const pickProduct = pick(['code', 'description', 'category', 'colors']);
   const pickColor = pick(['name', 'color']);
   const getImageUrl = get('url');
+  const getCategoryName = get('name');
 
   const pickAllColors = map(pickColor);
   const filterColors = transformBy(pickAllColors)('colors');
+  const filterCategoryName = transformBy(getCategoryName)('category');
 
-  const pickAllProduct = map(flow([pickProduct, filterColors]));
+  const pickAllProduct = map(flow([pickProduct, filterCategoryName, filterColors]));
 
   const filterProducts = transformBy(pickAllProduct)('products');
   const filterImage = transformBy(getImageUrl)('image');
