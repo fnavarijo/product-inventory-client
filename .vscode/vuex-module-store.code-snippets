@@ -1,0 +1,15 @@
+{
+	"Vuex initialize store": {
+		"scope": "typescript",
+		"prefix": "vuex-store",
+		"body": [
+			"import { MutationTree, ActionTree } from 'vuex';\n",
+			"import { RootState } from '@/store';\n",
+			"export const state = () => ({});\n",
+			"export type $1 = ReturnType<typeof state>;\n",
+			"export const mutations: MutationTree<$1> = {};\n",
+			"export const actions: ActionTree<$1, RootState> = {};\n"
+		],
+		"description": "Initialize vuex module store"
+	}
+}
