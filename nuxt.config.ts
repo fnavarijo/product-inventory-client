@@ -28,6 +28,7 @@ export default {
     '~plugins/axios-module.ts',
     '~plugins/axios-interceptor.ts',
     '~plugins/vee-validations.ts',
+    '~plugins/tailwind-config.ts',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
