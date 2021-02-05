@@ -1,8 +1,8 @@
 <template>
   <div>
     <section
-      :style="{ backgroundImage: 'url(https://portotheme.com/html/porto_ecommerce/demo_23/assets/images/slider/home_slider1.jpg)' }"
-      class="h-screen px-4 bg-cover bg-right"
+      :style="bannerBackground"
+      class="h-screen-4/5 px-4 bg-left-top bg-cover bg-no-repeat"
     />
     <section class="my-10 px-10 lg:px-24">
       <header class="text-center mb-8">
@@ -56,10 +56,23 @@ import Vue from 'vue';
 import ProductCard from '@/components/product/ProductCard.vue';
 import AppButton from '@/components/button/AppButton.vue';
 
+import { Dictionary } from '@/@types/global';
+
 export default Vue.extend({
   components: {
     AppButton,
     ProductCard,
+  },
+  async fetch (): Promise<void> {
+    await this.$store.dispatch('home/getHomePage');
+  },
+  computed: {
+    bannerBackground (): Dictionary<String> {
+      const { banner } = this.$store.state.home;
+      return banner
+        ? { backgroundImage: `url(${banner})` }
+        : { backgroundColor: this.$twConfig().theme.colors['light-gray']['500'] };
+    },
   },
 });
 </script>

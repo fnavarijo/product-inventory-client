@@ -40,6 +40,9 @@ module.exports = {
       width: {
         max: 'max-content',
       },
+      height: {
+        'screen-4/5': '80vh',
+      },
       inset: {
         '-4': '-1rem',
         '-8': '-2rem',
