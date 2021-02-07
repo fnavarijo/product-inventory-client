@@ -11,7 +11,7 @@ export const resetPropsWith =
           else {
             return keys.includes(currentKey)
               ? { ...dictionary, [currentKey]: resetValue }
-              : { ...dictionary };
+              : { ...dictionary, [currentKey]: currentValue };
           }
         }, {});
       };
