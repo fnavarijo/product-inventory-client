@@ -1,8 +1,11 @@
 <template>
-  <NuxtLink :to="`/catalog/${id}`" class="group m-auto cursor-pointer">
-    <div class="relative">
+  <NuxtLink
+    :to="`/catalog/${id}`"
+    class="group m-auto cursor-pointer"
+  >
+    <div class="relative pt-card">
       <img
-        class="square-256 object-cover"
+        class="object-cover absolute"
         :src="image"
         alt=""
       >
@@ -13,7 +16,6 @@
     <div class="flex flex-col mt-4">
       <span class="uppercase font-light">{{ category }}</span>
       <span class="text-lg text-dark-gray-600 hover:text-primary-600 transition ease-in duration-100">{{ name }}</span>
-      <span class="font-bold text-xl text-dark-gray-500">Q {{ price | currency }}</span>
     </div>
   </NuxtLink>
 </template>

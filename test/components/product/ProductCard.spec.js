@@ -1,11 +1,6 @@
-import { createLocalVue, mount, RouterLinkStub } from '@vue/test-utils';
+import { mount, RouterLinkStub } from '@vue/test-utils';
 
 import ProductCard from '@/components/product/ProductCard.vue';
-
-import { currencyFilter } from '@/plugins/filters';
-
-const localVue = createLocalVue();
-localVue.filter('currency', currencyFilter);
 
 describe('ProductCard component', () => {
   it('should render card with name, category and price', () => {
@@ -13,18 +8,17 @@ describe('ProductCard component', () => {
       propsData: {
         category: 'Shoes',
         name: 'Nike shoes',
-        price: 25.50,
-        id: 1,
+        image: 'http://domain.com/image.png',
+        id: '123456',
       },
       stubs: {
         NuxtLink: RouterLinkStub,
       },
-      localVue,
     });
 
     expect(wrapper.text()).toContain('Shoes');
     expect(wrapper.text()).toContain('Nike shoes');
-    expect(wrapper.text()).toContain('25.50');
+    expect(wrapper.find('img').attributes('src')).toBe('http://domain.com/image.png');
     expect(wrapper.html()).toMatchSnapshot();
   });
 });
