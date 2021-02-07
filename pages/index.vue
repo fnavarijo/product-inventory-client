@@ -70,6 +70,7 @@ export default Vue.extend({
     ProductCard,
   },
   async fetch (): Promise<void> {
+    await this.$store.dispatch('home/getHomePage');
     await this.$store.dispatch('products/getHomePageProducts');
   },
   computed: {
