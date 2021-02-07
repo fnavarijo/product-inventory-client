@@ -2,11 +2,11 @@
 
 exports[`ProductCard component should render card with name, category and price 1`] = `
 <a class="group m-auto cursor-pointer">
-  <div class="relative"><img src="~/assets/img/product.jpg" alt="" class="square-256 object-cover">
+  <div class="relative pt-card"><img src="http://domain.com/image.png" alt="" class="object-cover absolute">
     <div class="absolute bottom-0 bg-primary-600 text-white uppercase w-full text-center p-3 opacity-0 group-hover:opacity-100 transition ease-in duration-100">
       Ver
     </div>
   </div>
-  <div class="flex flex-col mt-4"><span class="uppercase font-light">Shoes</span> <span class="text-lg text-dark-gray-600 hover:text-primary-600 transition ease-in duration-100">Nike shoes</span> <span class="font-bold text-xl text-dark-gray-500">Q 25.50</span></div>
+  <div class="flex flex-col mt-4"><span class="uppercase font-light">Shoes</span> <span class="text-lg text-dark-gray-600 hover:text-primary-600 transition ease-in duration-100">Nike shoes</span></div>
 </a>
 `;
