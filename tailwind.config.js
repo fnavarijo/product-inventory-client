@@ -20,7 +20,7 @@ module.exports = {
       },
       spacing: {
         256: '256px',
-        cardRatio: '178.57%',
+        card: '150%',
       },
       padding: {
         full: '100%',
