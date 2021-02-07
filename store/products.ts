@@ -1,4 +1,5 @@
-import { MutationTree, ActionTree } from 'vuex';
+import { MutationTree, ActionTree, GetterTree } from 'vuex';
+import filter from 'lodash/fp/filter';
 
 import { RootState } from '@/store';
 import { ProductCombinations, Products } from '@/api';
@@ -14,6 +15,11 @@ export const state = () => ({
 });
 
 export type ProductsModuleState = ReturnType<typeof state>;
+
+export const getters: GetterTree<ProductsModuleState, RootState> = {
+  featuredProducts: state => filter('isFeatured')(state.products),
+  recentProducts: state => state.products,
+};
 
 export const mutations: MutationTree<ProductsModuleState> = {
   setAllProducts (state, products: Array<Product>) {
@@ -34,6 +40,12 @@ export const actions: ActionTree<ProductsModuleState, RootState> = {
   async getAllProducts ({ commit }): Promise<void> {
     const products = await Products.getAll();
     commit('setAllProducts', products);
+  },
+  async getHomePageProducts ({ commit }): Promise<void> {
+    // TODO: should handle recent products, how?
+    const featuredProducts = await Products.getAll({ isFeatured: true, _limit: 4 });
+    const recentProducts = await Products.getAll({ _limit: 4 });
+    commit('setAllProducts', featuredProducts.concat(recentProducts));
   },
   async getAllProductCombinations ({ commit }): Promise<void> {
     const productCombinations = await ProductCombinations.getAll();
