@@ -9,6 +9,7 @@ module.exports = {
     display: ['hover', 'responsive', 'group-hover'],
     inset: ['hover', 'responsive', 'group-hover'],
     visibility: ['responsive', 'group-hover'],
+    width: ['responsive', 'group-hover'],
   },
   theme: {
     extend: {
@@ -50,9 +51,11 @@ module.exports = {
         '-16': '-4rem',
         '-20': '-5rem',
         '-24': '-6rem',
+        '1/2': '50%',
       },
       transitionProperty: {
         bottom: 'bottom',
+        width: 'width',
       },
       transitionTimingFunction: {
         'in-expo': 'cubic-bezier(0, 1.12, 1, 1)',

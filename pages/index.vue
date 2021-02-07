@@ -4,7 +4,7 @@
       :style="bannerBackground"
       class="h-screen-4/5 px-4 bg-left-top bg-cover bg-no-repeat"
     />
-    <section class="my-10 px-10 lg:px-24">
+    <section class="my-10 px-10 lg:px-24 xl:px-32 2xl:px-56">
       <header class="text-center mb-8">
         <h2 class="text-3xl text-gray-900">
           Productos <strong>Destacados</strong>
@@ -15,7 +15,7 @@
         Por el momento no hay nada que mostrar
       </AppMessage>
       <div v-else>
-        <div class="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div class="grid gap-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           <ProductCard v-for="(product, index) in featuredProducts" :key="index" v-bind="product" />
         </div>
         <AppButton
@@ -29,7 +29,7 @@
       </div>
     </section>
     <hr class="border-light-gray-400 w-5/6 mx-auto">
-    <section class="my-10 px-10 lg:px-24">
+    <section class="my-10 px-10 lg:px-24 xl:px-48 2xl:px-56">
       <header class="text-center mb-8">
         <h2 class="text-3xl text-gray-900">Productos <strong>Nuevos</strong></h2>
         <span>Los nuevos productos</span>
@@ -38,11 +38,8 @@
         Por el momento no hay nada que mostrar
       </AppMessage>
       <div v-else>
-        <div class="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-          <ProductCard :id="1" category="Zapatos" name="Nike shoes" :price="25.50" />
-          <ProductCard :id="1" category="Zapatos" name="Nike shoes" :price="25.50" />
-          <ProductCard :id="1" category="Zapatos" name="Nike shoes" :price="25.50" />
-          <ProductCard :id="1" category="Zapatos" name="Nike shoes" :price="25.50" />
+        <div class="grid gap-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          <ProductCard v-for="(product, index) in recentProducts" :key="index" v-bind="product" />
         </div>
         <AppButton
           as="nuxt-link"

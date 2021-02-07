@@ -1,8 +1,10 @@
 import { MutationTree, ActionTree, GetterTree } from 'vuex';
 import filter from 'lodash/fp/filter';
+import map from 'lodash/fp/map';
 
 import { RootState } from '@/store';
 import { ProductCombinations, Products } from '@/api';
+import { renamePropWith } from '@/api/utils';
 
 import { Product, ProductCombination } from '@/api/types';
 
@@ -17,8 +19,9 @@ export const state = () => ({
 export type ProductsModuleState = ReturnType<typeof state>;
 
 export const getters: GetterTree<ProductsModuleState, RootState> = {
-  featuredProducts: state => filter('isFeatured')(state.products),
-  recentProducts: state => state.products,
+  productCards: ({ products }) => map(renamePropWith('image')('featuredImage'))(products),
+  featuredProducts: (_, getters) => filter('isFeatured')(getters.productCards),
+  recentProducts: (_, getters) => getters.productCards,
 };
 
 export const mutations: MutationTree<ProductsModuleState> = {
