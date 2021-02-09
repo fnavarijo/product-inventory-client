@@ -60,6 +60,9 @@ module.exports = {
       transitionTimingFunction: {
         'in-expo': 'cubic-bezier(0, 1.12, 1, 1)',
       },
+      screens: {
+        '2xl': '1536px',
+      },
     },
     colors: {
       white: defaultTheme.colors.white,
