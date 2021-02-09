@@ -14,10 +14,13 @@
       </div>
     </div>
     <div class="flex flex-col mt-4">
-      <span class="uppercase">{{ category }}</span>
-      <span class="text-lg text-dark-gray-600 font-bold hover:text-primary-600 transition ease-in duration-100">
+      <div id="category" class="uppercase overflow-hidden">
+        {{ categoryName }}
+      </div>
+      <!-- TODO: Not sure if the h-12 is the way to go to have default height -->
+      <p class="text-lg h-12 text-dark-gray-600 font-bold line-clamped hover:text-primary-600 transition ease-in duration-100">
         {{ name }}
-      </span>
+      </p>
     </div>
   </NuxtLink>
 </template>
@@ -25,9 +28,42 @@
 <script lang="ts">
 import Vue from 'vue';
 
-import { ProductContainerBase } from '@/components/product/ProductContainerBase';
+// TODO: remove it
+// import { ProductContainerBase } from '@/components/product/ProductContainerBase';
 
 export default Vue.extend({
-  mixins: [ProductContainerBase],
+  // mixins: [ProductContainerBase],
+  props: {
+    id: {
+      type: String,
+      required: true,
+    },
+    category: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    image: {
+      type: String,
+      required: true,
+    },
+  },
+  computed: {
+    categoryName (): string {
+      return this.category.split('-')[0].trim();
+    },
+  },
 });
 </script>
+
+<style scoped>
+.line-clamped {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+}
+</style>

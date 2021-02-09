@@ -62,7 +62,7 @@ import ProductCard from '@/components/product/ProductCard.vue';
 import AppButton from '@/components/button/AppButton.vue';
 
 import { Dictionary } from '@/@types/global';
-import { Product } from '~/api/types';
+import { Product } from '@/api/types';
 
 export default Vue.extend({
   components: {
