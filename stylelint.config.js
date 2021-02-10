@@ -1,7 +1,7 @@
 module.exports = {
   extends: [
+    'stylelint-config-prettier',
     'stylelint-config-standard',
-    'stylelint-config-prettier'
   ],
   // add your custom config here
   // https://stylelint.io/user-guide/configuration
@@ -14,9 +14,9 @@ module.exports = {
           'apply',
           'variants',
           'responsive',
-          'screen'
+          'screen',
         ],
-      }
+      },
     ],
     'declaration-block-trailing-semicolon': null,
     'no-descending-specificity': null,

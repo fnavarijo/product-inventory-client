@@ -1,4 +1,6 @@
 {
   "editor.tabSize": 2,
-  "css.validate": false
+  "scss.validate": false,
+  "css.validate": false,
+  "vetur.validation.style": false
 }

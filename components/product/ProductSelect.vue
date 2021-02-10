@@ -22,7 +22,8 @@ export default Vue.extend({
 }
 
 .checkmark {
-  transition: background-color 250ms linear,
+  transition:
+    background-color 250ms linear,
     border-color 250ms linear;
 }
 
@@ -34,6 +35,7 @@ export default Vue.extend({
 .checkmark::after {
   content: '';
   display: none;
+
   @apply absolute;
 }
 
