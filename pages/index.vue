@@ -7,7 +7,7 @@
     />
     <HomeSection :products="featuredProducts.slice(0, 4)">
       <template #title>
-        Productos <strong>Destacados</strong>
+        <strong>Productos</strong> Destacados
       </template>
       <template #subtitle>
         Los productos que más le gustan a todos.
@@ -17,7 +17,7 @@
     <!-- TODO: Slice is just a temporary solution to the 4 products on index -->
     <HomeSection :products="recentProducts.slice(0, 4)">
       <template #title>
-        Productos <strong>Nuevos</strong>
+        <strong>Productos</strong> Nuevos
       </template>
       <template #subtitle>
         Los nuevos productos

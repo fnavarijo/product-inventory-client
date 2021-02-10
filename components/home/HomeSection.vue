@@ -1,7 +1,7 @@
 <template>
-  <section class="my-10 px-10 lg:px-24 xl:px-32 2xl:px-56">
-    <header class="text-center mb-8">
-      <h2 class="text-3xl text-gray-900">
+  <section class="my-16 px-10 lg:px-24 xl:px-32 2xl:px-56">
+    <header class="text-center mb-16">
+      <h2 class="section-name text-3xl text-gray-900 relative">
         <slot name="title" />
       </h2>
       <span>
@@ -58,3 +58,21 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style scoped>
+.section-name::before,
+.section-name::after {
+  content: '';
+  height: 1px;
+
+  @apply absolute bg-primary-500 w-1/4 top-1/2 transform -translate-y-1/2;
+}
+
+.section-name::before {
+  @apply left-0;
+}
+
+.section-name::after {
+  @apply right-0;
+}
+</style>
