@@ -3,7 +3,7 @@
     <!-- TODO: Add animation on appearing text -->
     <section
       :style="bannerBackground"
-      class="h-screen-4/5 px-4 bg-left-top bg-cover bg-no-repeat"
+      class="h-screen-4/5 px-4 bg-right-top md:bg-left-top bg-cover bg-no-repeat"
     />
     <HomeSection :products="featuredProducts.slice(0, 4)">
       <template #title>
