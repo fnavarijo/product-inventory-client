@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuOption component should display option without sublist 1`] = `
+<div class="flex flex-col min-h-6 justify-start"><span class="p-1 mb-2 option rounded-md capitalize select-none cursor-pointer hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+    Base
+  </span>
+  <ul class="h-auto relative overflow-hidden transition-all duration-100 ease-in-slide flex-over-0">
+    <transition-stub name="slide-down">
+      <div class="relative top-0" style="display: none;">
+        <li class="subitems pl-2 py-1 capitalize border-l border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            Sub
+          </span></li>
+        <li class="subitems pl-2 py-1 capitalize border-l border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            Item
+          </span></li>
+      </div>
+    </transition-stub>
+  </ul>
+</div>
+`;
+
+exports[`MenuOption component should display sublist on click 1`] = `
+<div class="flex flex-col min-h-6 justify-start"><span class="p-1 mb-2 option rounded-md capitalize select-none cursor-pointer hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+    Base
+  </span>
+  <ul class="h-auto relative overflow-hidden transition-all duration-100 ease-in-slide flex-over-1">
+    <transition-stub name="slide-down">
+      <div class="relative top-0" style="">
+        <li class="subitems pl-2 py-1 capitalize border-l border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            Sub
+          </span></li>
+        <li class="subitems pl-2 py-1 capitalize border-l border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            Item
+          </span></li>
+      </div>
+    </transition-stub>
+  </ul>
+</div>
+`;

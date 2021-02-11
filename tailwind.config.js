@@ -44,6 +44,11 @@ module.exports = {
       height: {
         'screen-4/5': '80vh',
       },
+      minHeight: {
+        4: '1rem',
+        6: '1.5rem',
+        8: '2rem',
+      },
       inset: {
         '-4': '-1rem',
         '-8': '-2rem',
@@ -55,10 +60,12 @@ module.exports = {
       },
       transitionProperty: {
         bottom: 'bottom',
+        top: 'top',
         width: 'width',
       },
       transitionTimingFunction: {
         'in-expo': 'cubic-bezier(0, 1.12, 1, 1)',
+        'in-slide': 'cubic-bezier(0.05, 0.93, 1, 1)',
       },
       screens: {
         '2xl': '1536px',
