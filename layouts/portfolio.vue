@@ -11,31 +11,14 @@
     </header>
     <div class="grid grid-cols-1 lg:grid-cols-nav">
       <!-- TODO: hide on mobile -->
+      <!-- TODO: Finish behavior of this elements -->
       <aside class="pl-10 hidden lg:block">
-        <ProductCategoryMenu
-          :categories="['Accesorios', 'Ropa', 'Zapatos']"
+        <AppCategoryMenu
+          :categories="productMenu"
           class="my-5"
           @select="filterProducts"
         />
-        <!-- TODO: Move to own component to filter -->
-        <div class="bg-primary-200 text-gray-900 py-3 px-2">
-          <div class="font-bold border-b border-light-gray-600">
-            Talla
-          </div>
-          <FlowCheckbox id="small" name="small">
-            Pequeño
-          </FlowCheckbox>
-          <FlowCheckbox id="medium" name="medium">
-            Mediano
-          </FlowCheckbox>
-          <FlowCheckbox id="big" name="big">
-            Grande
-          </FlowCheckbox>
-
-          <div class="font-bold border-b border-light-gray-600">
-            Precio
-          </div>
-        </div>
+        <AppPortfolioFilter />
       </aside>
       <main class="px-10 py-3">
         <Nuxt />
@@ -50,17 +33,21 @@ import { mapGetters } from 'vuex';
 
 import AppSalute from '@/components/structural/AppSalute.vue';
 import FlowCheckbox from '@/components/flowContent/FlowCheckbox.vue';
-import ProductCategoryMenu from '@/components/product/ProductCategoryMenu.vue';
+import AppCategoryMenu from '@/components/structural/AppCategoryMenu.vue';
+import AppPortfolioFilter from '@/components/structural/AppPortfolioFilter.vue';
 
 import UserIcon from '@/assets/img/user.svg?inline';
 import ShoppingCartIcon from '@/assets/img/shopping.svg?inline';
 
+import { ProductCategories } from '@/api/types';
+
 export default Vue.extend({
   name: 'Portfolio',
   components: {
-    ProductCategoryMenu,
-    FlowCheckbox,
     AppSalute,
+    FlowCheckbox,
+    AppCategoryMenu,
+    AppPortfolioFilter,
     UserIcon,
     ShoppingCartIcon,
   },
@@ -73,6 +60,18 @@ export default Vue.extend({
     ...mapGetters('user', {
       isUserLoggedIn: 'isUserLoggedIn',
     }),
+    productMenu (): ProductCategories {
+      return {
+        ropa: [
+          'blusas',
+          'pantalones',
+        ],
+        accesorios: [
+          'Bean bags',
+        ],
+        zapatos: [],
+      };
+    },
   },
   methods: {
     filterProducts (category: string): void {

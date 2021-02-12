@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppCategoryMenu component should match snapshot 1`] = `
+<div class="text-dark-gray-700">
+  <div class="py-2 border-b border-gray-500 font-bold mb-2 text-lg">
+    Productos
+  </div>
+  <ul>
+    <li class="pl-2 py-1 cursor-pointer">
+      <div class="flex flex-col min-h-6 justify-start"><span class="p-1 mb-2 option rounded-md capitalize select-none cursor-pointer hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+    0
+  </span>
+        <ul class="h-auto relative overflow-hidden transition-all duration-100 ease-in-slide flex-over-0">
+          <transition-stub name="slide-down">
+            <div class="relative top-0" style="display: none;">
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            A
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            c
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            c
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            e
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            s
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            o
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            r
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            i
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            e
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            s
+          </span></li>
+            </div>
+          </transition-stub>
+        </ul>
+      </div>
+    </li>
+    <li class="pl-2 py-1 cursor-pointer">
+      <div class="flex flex-col min-h-6 justify-start"><span class="p-1 mb-2 option rounded-md capitalize select-none cursor-pointer hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+    1
+  </span>
+        <ul class="h-auto relative overflow-hidden transition-all duration-100 ease-in-slide flex-over-0">
+          <transition-stub name="slide-down">
+            <div class="relative top-0" style="display: none;">
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            C
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            l
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            o
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            t
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            h
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            i
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            n
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            g
+          </span></li>
+            </div>
+          </transition-stub>
+        </ul>
+      </div>
+    </li>
+    <li class="pl-2 py-1 cursor-pointer">
+      <div class="flex flex-col min-h-6 justify-start"><span class="p-1 mb-2 option rounded-md capitalize select-none cursor-pointer hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+    2
+  </span>
+        <ul class="h-auto relative overflow-hidden transition-all duration-100 ease-in-slide flex-over-0">
+          <transition-stub name="slide-down">
+            <div class="relative top-0" style="display: none;">
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            S
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            h
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            o
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            e
+          </span></li>
+              <li class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"><span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            s
+          </span></li>
+            </div>
+          </transition-stub>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

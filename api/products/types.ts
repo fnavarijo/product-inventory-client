@@ -1,3 +1,5 @@
+import { Dictionary } from '@/@types/global';
+
 export interface Product {
   id: number;
   name: string;
@@ -8,3 +10,6 @@ export interface Product {
   description?: string;
   images?: Array<string>;
 }
+
+// TODO: I need it?
+export type ProductCategories = Dictionary<Array<string>>;
