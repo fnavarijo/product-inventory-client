@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlowCheckbox component should render component with desired design 1`] = `
+<div><label class="select-none cursor-pointer flex items-center group"><input name="check-filter" type="checkbox" class="checkbox absolute left-0 opacity-0">
+    <div class="checkbox-display h-4 w-4 border border-dark-gray-700 rounded inline-block relative mr-2 group-hover:bg-light-gray-400 transition ease-in-slide duration-200"><svg class="invisible"></svg></div> CheckFilter
+  </label></div>
+`;

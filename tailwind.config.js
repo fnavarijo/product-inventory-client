@@ -4,6 +4,7 @@ module.exports = {
   variants: {
     opacity: ['responsive', 'hover', 'focus', 'group-hover'],
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+    backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
     fill: ['hover'],
     stroke: ['hover'],
     display: ['hover', 'responsive', 'group-hover'],
@@ -34,9 +35,11 @@ module.exports = {
       },
       fill: theme => ({
         primary: theme('colors.primary.500'),
+        white: theme('colors.white'),
       }),
       stroke: theme => ({
         primary: theme('colors.primary.500'),
+        white: theme('colors.white'),
       }),
       width: {
         max: 'max-content',
@@ -70,6 +73,9 @@ module.exports = {
       screens: {
         '2xl': '1536px',
       },
+      boxShadow: {
+        accesible: '0 0 0 3px rgba(15, 15, 15, 0.2)',
+      },
     },
     colors: {
       white: defaultTheme.colors.white,
@@ -83,6 +89,7 @@ module.exports = {
         400: '#E7E7E7',
         500: '#E4E4E4',
         600: '#DFDFDF',
+        700: '#C4C4C4',
       },
       'dark-gray': {
         400: '#767F84',
