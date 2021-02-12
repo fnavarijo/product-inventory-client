@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col min-h-6 justify-start">
     <span
-      class="p-1 mb-2 option rounded-md capitalize select-none cursor-pointer hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear"
+      class="p-1 mb-2 option rounded-md capitalize select-none cursor-pointer hover:bg-light-gray-700 hover:bg-opacity-50 transition duration-100 ease-linear"
       @click="displaySubItems"
     >
       {{ option }}
@@ -18,9 +18,9 @@
           <li
             v-for="(subItem, index) in subItems"
             :key="index"
-            class="subitems pl-2 py-1 capitalize border-l border-dark-gray-700"
+            class="subitems pl-2 py-1 capitalize border-l-2 border-dark-gray-700"
           >
-            <span class="py-1 px-2 rounded-md hover:bg-light-gray-600 hover:bg-opacity-50 transition duration-100 ease-linear">
+            <span class="py-1 px-2 rounded-md hover:bg-light-gray-700 hover:bg-opacity-50 transition duration-100 ease-linear">
               {{ subItem }}
             </span>
           </li>
