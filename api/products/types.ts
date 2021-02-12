@@ -11,5 +11,10 @@ export interface Product {
   images?: Array<string>;
 }
 
+export interface Color {
+  name: string;
+  color: string;
+}
+
 // TODO: I need it?
 export type ProductCategories = Dictionary<Array<string>>;
