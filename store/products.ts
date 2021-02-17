@@ -9,9 +9,11 @@ import { renamePropWith } from '@/api/utils';
 import { Product } from '@/api/types';
 
 export const state = () => ({
-  // TODO: Evaluate if products can be removed
   products: [] as Array<Product>,
   product: null as Product | null,
+  pagination: {
+    start: 0,
+  },
 });
 
 export type ProductsModuleState = ReturnType<typeof state>;
@@ -29,6 +31,10 @@ export const mutations: MutationTree<ProductsModuleState> = {
   setProduct (state, product: Product) {
     state.product = product;
   },
+  setPaginatedProducts (state, { products, skipped }: { products: Array<Product>, skipped: number }) {
+    state.products = state.products.concat(products);
+    state.pagination.start = skipped;
+  },
 };
 
 export const actions: ActionTree<ProductsModuleState, RootState> = {
@@ -45,5 +51,9 @@ export const actions: ActionTree<ProductsModuleState, RootState> = {
   async getProductById ({ commit }, productId: number): Promise<void> {
     const product = await Products.getById(productId);
     commit('setProduct', product);
+  },
+  async getPaginatedProducts ({ commit }, { start }: { start: number }): Promise<void> {
+    const products = await Products.getAll({ _start: start, _limit: 8 });
+    commit('setPaginatedProducts', { products, skipped: start + 8 });
   },
 };
