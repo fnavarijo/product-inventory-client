@@ -2,8 +2,9 @@
   <component
     :is="as"
     :to="to"
-    class="py-4 px-10 w-max rounded-md font-bold transition duration-100 ease-linear"
+    class="py-4 px-10 w-max rounded-md font-bold text-sm md:text-base transition duration-100 ease-linear"
     :class="color"
+    @click="click"
   >
     <slot />
   </component>
@@ -28,6 +29,11 @@ export default Vue.extend({
       type: String,
       default: 'primary',
       validator: value => ['primary', 'secondary'].includes(value),
+    },
+  },
+  methods: {
+    click (): void {
+      this.$emit('click');
     },
   },
 });
