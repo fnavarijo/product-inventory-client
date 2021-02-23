@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Products.getById function should fetch and transform product 1`] = `
+Object {
+  "availableSizes": Array [
+    "S",
+    "M",
+  ],
+  "category": "Accesorios - BeanBags",
+  "colors": Array [
+    Object {
+      "color": "#000000",
+      "name": "Negro",
+    },
+  ],
+  "description": "Bean bag relleno de duroport para que pueda ser utilizado donde se desee debido a su forma elastica",
+  "featuredImage": "https://res.cloudinary.com/dkvtpo8w1/image/upload/v1612318190/bean_bag_black_29a8280a9d.png",
+  "id": "602a8e297703d2202bee1ceb",
+  "images": Array [],
+  "isFeatured": false,
+  "name": "Bean Bag de cuero 2",
+}
+`;

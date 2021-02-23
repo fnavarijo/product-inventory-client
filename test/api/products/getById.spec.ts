@@ -10,21 +10,24 @@ describe('Products.getById function', () => {
   beforeAll(() => {
     const adapter = new MockAdapter(axios);
 
-    adapter.onGet('/products/1').reply(200, mock);
+    adapter.onGet('/products/601a077f39aaa829dd99de3e').reply(200, mock);
 
     initAxios({ axios: axios as NuxtAxiosInstance });
   });
 
   it('should fetch and transform product', async () => {
-    const product = await Products.getById(1);
+    const product = await Products.getById('601a077f39aaa829dd99de3e');
 
-    expect(product).toMatchObject({
-      id: 1,
-      name: 'Colombian jeans',
-      price: 150.35,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel dictum odio. Duis accumsan justo at purus sagittis, fermentum laoreet urna tincidunt. Donec fringilla dui eu diam sollicitudin vehicula eget a magna.',
-      shortDescription: '',
-      images: ['/uploads/product_c02b1dc005.jpg'],
-    });
+    expect(product).toHaveProperty('id');
+    expect(product).toHaveProperty('name');
+    expect(product).toHaveProperty('category');
+    expect(product).toHaveProperty('featuredImage');
+    expect(product).toHaveProperty('isFeatured');
+    expect(product).toHaveProperty('description');
+    expect(product).toHaveProperty('images');
+    expect(product).toHaveProperty('colors');
+    expect(product).toHaveProperty('availableSizes');
+
+    expect(product).toMatchSnapshot();
   });
 });

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Products.getAll function should fetch products list with filter 1`] = `
+Array [
+  Object {
+    "category": "Zapatos - Casuales",
+    "featuredImage": "https://res.cloudinary.com/dkvtpo8w1/image/upload/v1612318192/formal_shoes_8d4a69315b.png",
+    "id": "601a06288d3ce427a235e38c",
+    "isFeatured": true,
+    "name": "Kyler OX",
+  },
+]
+`;
+
+exports[`Products.getAll function should fetch products list without filter 1`] = `
+Array [
+  Object {
+    "category": "Zapatos - Casuales",
+    "featuredImage": "https://res.cloudinary.com/dkvtpo8w1/image/upload/v1612318192/formal_shoes_8d4a69315b.png",
+    "id": "601a06288d3ce427a235e38c",
+    "isFeatured": false,
+    "name": "Kyler OX",
+  },
+  Object {
+    "category": "Ropa - Camisas",
+    "featuredImage": "https://res.cloudinary.com/dkvtpo8w1/image/upload/v1612318199/shirt_75eb3b9fc2.png",
+    "id": "601a072f39aaa829dd99de39",
+    "isFeatured": false,
+    "name": "Deportiva para ejercicio",
+  },
+]
+`;
