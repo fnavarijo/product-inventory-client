@@ -1,4 +1,4 @@
-import { renamePropWith } from '@/api/utils';
+import { renamePropTo } from '@/api/utils';
 
 describe('RenameProp function', () => {
   it('should rename prop name', () => {
@@ -8,7 +8,7 @@ describe('RenameProp function', () => {
       fish: 'plup',
     };
 
-    const renameProp = renamePropWith('dog')('cat');
+    const renameProp = renamePropTo('dog')('cat');
 
     expect(renameProp(animals)).toMatchObject({
       dog: 'woff',
@@ -24,7 +24,7 @@ describe('RenameProp function', () => {
       fish: { sound: 'plup' },
     };
 
-    const renameProp = renamePropWith('dog')('cat');
+    const renameProp = renamePropTo('dog')('cat');
 
     expect(renameProp(animals)).toMatchObject({
       dog: { sound: 'woff' },

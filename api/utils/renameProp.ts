@@ -1,6 +1,6 @@
 import { Dictionary } from '@/@types/global';
 
-export const renamePropWith =
+export const renamePropTo =
   (newName: string) =>
     (currentName: string) =>
       (data: Dictionary<any>) => {
