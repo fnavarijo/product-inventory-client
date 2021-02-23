@@ -4,13 +4,13 @@ import map from 'lodash/fp/map';
 
 import { RootState } from '@/store';
 import { Products } from '@/api';
-import { renamePropWith } from '@/api/utils';
+import { renamePropTo } from '@/api/utils';
 
-import { Product } from '@/api/types';
+import { Product, SingleProduct } from '@/api/types';
 
 export const state = () => ({
   products: [] as Array<Product>,
-  product: null as Product | null,
+  product: null as SingleProduct | null,
   pagination: {
     start: 0,
   },
@@ -19,7 +19,7 @@ export const state = () => ({
 export type ProductsModuleState = ReturnType<typeof state>;
 
 export const getters: GetterTree<ProductsModuleState, RootState> = {
-  productCards: ({ products }) => map(renamePropWith('image')('featuredImage'))(products),
+  productCards: ({ products }) => map(renamePropTo('image')('featuredImage'))(products),
   featuredProducts: (_, getters) => filter('isFeatured')(getters.productCards),
   recentProducts: (_, getters) => getters.productCards,
 };
@@ -28,7 +28,7 @@ export const mutations: MutationTree<ProductsModuleState> = {
   setAllProducts (state, products: Array<Product>) {
     state.products = products;
   },
-  setProduct (state, product: Product) {
+  setProduct (state, product: SingleProduct) {
     state.product = product;
   },
   setPaginatedProducts (state, { products, skipped }: { products: Array<Product>, skipped: number }) {
@@ -48,7 +48,7 @@ export const actions: ActionTree<ProductsModuleState, RootState> = {
     const recentProducts = await Products.getAll({ _limit: 4 });
     commit('setAllProducts', featuredProducts.concat(recentProducts));
   },
-  async getProductById ({ commit }, productId: number): Promise<void> {
+  async getProductById ({ commit }, productId: string): Promise<void> {
     const product = await Products.getById(productId);
     commit('setProduct', product);
   },
