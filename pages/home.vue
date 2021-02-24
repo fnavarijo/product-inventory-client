@@ -25,6 +25,6 @@ export default {
       },
     });
     this.articles = data;
-  }
-}
+  },
+};
 </script>

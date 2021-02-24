@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductSizes component should generate sizes component with correct style 1`] = `<div class="my-4 flex"><span class="mr-4">Tallas</span> <span class="mx-1 font-bold">S</span><span class="mx-1 font-bold">L</span><span class="mx-1 font-bold">XL</span></div>`;
