@@ -1,8 +1,12 @@
 {
   "extends": [
-    "@nuxtjs/eslint-config-typescript"
+    "@nuxtjs/eslint-config-typescript",
+    "prettier",
+    "prettier/vue"
   ],
+  "plugins": ["prettier"],
   "rules": {
+    "prettier/prettier": "error",
     "semi": ["error", "always"],
     "comma-dangle": ["error", {
       "arrays": "always-multiline",

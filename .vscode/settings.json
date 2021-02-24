@@ -2,5 +2,9 @@
   "editor.tabSize": 2,
   "scss.validate": false,
   "css.validate": false,
-  "vetur.validation.style": false
+  "vetur.validation.style": false,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
